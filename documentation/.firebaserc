@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "default": "edic-door"
+  },
+  "targets": {
+    "liftauth": {
+      "hosting": {
+        "docs-production": [
+          "liftauthdocs"
+        ]
+      }
+    },
+    "liftauth-staging": {
+      "hosting": {
+        "docs-staging": [
+          "liftauthdocs-staging1"
+        ]
+      }
+    },
+    "edic-door": {
+      "hosting": {
+        "sipdocs": [
+          "sipdocs"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

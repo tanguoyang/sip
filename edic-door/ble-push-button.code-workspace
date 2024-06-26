@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../ble-push-button"
+		},
+		{
+			"name": "edic-door",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
