@@ -34,13 +34,18 @@ export const triggerDevicePress = onRequest(async (request, response) => {
   }
 
   try {
-    const apiKeyDoc = await db.collection("apiKeys").doc(authorization).get();
-    if (!apiKeyDoc.exists) {
+    const apiKeyQuerySnapshot = await db
+      .collection("apiKeys")
+      .where("key", "==", authorization)
+      .get();
+    if (apiKeyQuerySnapshot.empty) {
       response.status(401).send("Unauthorized");
       return;
     }
 
+    const apiKeyDoc = apiKeyQuerySnapshot.docs[0];
     const apiKeyData = apiKeyDoc.data() as ApiKey;
+
     if (!apiKeyData.deviceIds.includes(deviceId as string)) {
       response.status(403).send("Forbidden");
       return;

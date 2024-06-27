@@ -44,8 +44,6 @@ curl -X POST "https://triggerdevicepress-73gsig7a6q-uc.a.run.app/triggerDevicePr
 
 ## Example Response
 
-```json
-{
-  "message": "Device press triggered successfully"
-}
+```text
+Device press triggered successfully
 ```
